@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Template Literal ES6</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        // menggunakan template literal
+        const nama = 'Fictor Retno Lobbu';
+        const usia = 21;
+        const pekerjaan = 'Mahasiswa';
+
+        // Tidak ada baris kosong di dalam template literal
+        const profil = `Name: ${nama} <br> Age: ${usia} tahun <br> Expertise/job: ${pekerjaan}`;
+
+        // Menampilkan output ke dalam elemen HTML dengan ID "output"
+        document.getElementById('output').innerHTML = profil;
+    </script>
+</body>
+</html>

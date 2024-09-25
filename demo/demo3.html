@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrow Function Scope</title>
+</head>
+<body>
+    <script>
+        // arrow function
+        const arrowFunction = () => {
+            let z = 30; // z hanya dapat di akses dala, fungsi
+            console.log("Nilai z:", z); // Output: 30
+        };
+
+        // call function
+        arrowFunction();
+
+        // z tidak dapat diakses di luar fungsi
+        console.log("Nilai z diluar fungsi:", z) //error
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        // Membuat class
+        class Calculator {
+            constructor(myName) {
+                this.studentName = myName;
+            }
+
+            // Menampilkan nama student
+            printStudent () {
+                return 'My name is ' + this.studentName;
+            }
+
+            // Penjumlahan
+            add(a, b) {
+                return a + b;
+            }
+
+            // Pengurangan
+            subtract(a, b) {
+                return a - b;
+            }
+
+            // Perkalian
+            multiply(a, b) {
+                return a * b;
+            }
+
+            // Pembagian
+            divide(a, b) {
+                return a / b;
+            }
+        }
+
+        // Membuat objek dari class
+        const myCal = new Calculator("Fictor Retno Lobbu");
+        document.write("<p>Me: " + myCal.printStudent() + "</p>");
+
+        // Membuat fungsi calculator
+        function calculator(a, b) {
+            const add = myCal.add(a, b);
+            const subtract = myCal.subtract(a, b);
+            const multiply = myCal.multiply(a, b);
+            const divide = myCal.divide(a, b);
+
+            return [add, subtract, multiply, divide];
+        }
+
+        // ES6 Destructuring (cara baru untuk menetapkan nilai ke variabel)
+        const [add, subtract, multiply, divide] = calculator(5, 10);
+
+        // Tampilkan di browser
+        document.write("<p>Sum: " + add + "</p>");
+        document.write("<p>Difference: " + subtract + "</p>");
+        document.write("<p>Product: " + multiply + "</p>");
+        document.write("<p>Division: " + divide + "</p>");
+    </script>
+</body>
+</html>
